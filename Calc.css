@@ -18,3 +18,20 @@ body {
     width: 100%;
     justify-content: flex-end;
 }
+
+#calculator--buttons {
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+#button--0 {
+    width: 100%;
+    align-self: center;
+}
+
+#operators {
+    display: flex;
+    width: 20%;
+    flex-direction: row;
+}
