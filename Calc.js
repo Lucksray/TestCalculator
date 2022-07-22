@@ -1,5 +1,6 @@
 let currentEvent = "null";
-let 
+let equation;
+let total1;
 $ = "Calc.html";
 
 function changeEvent(x){
@@ -46,17 +47,17 @@ function showAnswer(a){
     document.getElementById("answer").innerHTML = a;
 }
 
-function submit(x,y){
-    if(currentEvent === "add"){
-        let a = addition(x,y);
-    } else if (currentEvent === "subtract"){
-        let a = subtraction(x,y);
-    } else if (currentEvent === "multiply"){
-        let a = multiplication(x,y);
-    } else {
-        let a = dividation(x,y);
-    }
 
-    showAnswer(a);
+function addNumber(num){
+    equation += "" + num;
 }
 
+function addOperator(op){
+    equation += "" + op;
+}
+
+function endEquation(){
+    let equa = parseInt(equation);
+    //finish this
+    // maybe change to array system for easier use of equation segregation
+}
