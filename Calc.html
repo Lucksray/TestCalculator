@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Calc.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <header class="header--title">
+        <h1>This is the calculator</h1>
+    </header>
+    <article id="controller">
+        <section id="controller--navbar">
+            <script src="Calc.js"></script>
+            <li><button id="button" onclick="changeEvent(1)">Addition</button></li>
+            <li><button id="button" onclick="changeEvent(2)">Substraction</button></li>
+            <li><button id="button" onclick="changeEvent(3)">Multiplication</button></li>
+            <li><button id="button" onclick="changeEvent(4)">Dividation</button></li>
+        </section>
+
+        <section id="current--event"></section>
+        <p id="curEvent">Current Event</p>
+    </article>
+
+    <article>
+        <header>
+            <h3>Your Equation</h3>
+        </header>
+        <form id="equation">
+            <label for="fnum">First Number</label><br>
+            <input type="number" id="fnum" name="fnum"><br>
+            <label for="snum">Second Number</label><br>
+            <input type="number" id="snum" name="snum"><br><br>
+            <label for="submit">submit</label>
+            <input type="button" onclick="submit(fnum,snum)" id="submit" name="submit"><br>
+        </form>
+
+        <section>
+            <p id="answer">Please submit an equation</p>
+        </section>
+    </article>
+
+    
+</body>
+</html>

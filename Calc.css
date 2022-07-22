@@ -1,0 +1,20 @@
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#controller--navbar {
+    list-style: none;
+    width: 75%;
+    display: flex;
+}
+
+#current--event {
+    font-family: sans-serif;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
