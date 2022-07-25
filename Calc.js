@@ -1,63 +1,54 @@
-let currentEvent = "null";
-let equation;
-let total1;
+let setNum1;
+let setNum2;
+let operate;
+let total;
 $ = "Calc.html";
 
-function changeEvent(x){
-    if(x == 1){
-        currentEvent = "add";
-    } else if (x == 2){
-        currentEvent = "subtract"
-    } else if (x == 3){
-        currentEvent = "multiply";
-    } else if (x == 4){
-        currentEvent = "divide";
-    }
-    console.log(currentEvent);
-    getEvent();
-}
-
-function getEvent(){
-    document.getElementById("curEvent").innerHTML = currentEvent;
-    return currentEvent;
-}
-
-function addition(x,y){
-    let a = x + y;
-    return a;
-}
-
-function subtraction(x,y){
-    let a = x - y;
-    return a;
-}
-
-function multiplication(x,y){
-    let a = x * y;
-    return a;
-}
-
-function dividation(x,y){
-    let a = x / y;
-    let b = x % y;
-    return a + " remainder" + b;
-}
 
 function showAnswer(a){
     document.getElementById("answer").innerHTML = a;
 }
 
 
-function addNumber(num){
-    equation += "" + num;
+function editEquation(input){
+    if(isNaN(input)){
+        setNum1 += "" + input;
+        document.getElementById("number--first").innerHTML = setNum1;
+    } else if(input == "=") {
+        if(setNum2 && setNum2 != 0){
+            if(operate == "+"){
+                total = add(setNum2,setNum1);
+                setNum2 = total;
+            } else if(operate == "-"){
+                total = sub(setNum2, setNum1);
+                setNum2 = total;
+            } else if(operate == "*"){
+                total = mult(setNum2,setNum1);
+                setNum2 = total;
+            } else if(operate == "/"){
+                total = div(setNum2,setNum1);
+                setNum2 = total;
+            } else if(operator == "**"){
+                total = pow(setNum2,setNum1);
+                setNum2 = total;
+            }
+            
+        }
+    }
 }
 
-function addOperator(op){
-    equation += "" + op;
+function add(x,y){
+    return x + y;
 }
-
-function endEquation(){
-    let equa = parseInt(equation);
-    //finish this
-    // maybe change to array system for easier use of equation segregation
+function sub(x,y){
+    return x - y;
+}
+function mult(x,y){
+    return x * y;
+}
+function div(x,y){
+    return parseFloat(x / y);
+}
+function pow(x,y){
+    return x ** y;
 }

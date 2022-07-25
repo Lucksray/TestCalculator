@@ -6,27 +6,44 @@ body {
     align-items: center;
 }
 
-#controller--navbar {
-    list-style: none;
-    width: 75%;
-    display: flex;
-}
-
-#current--event {
-    font-family: sans-serif;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-}
-
 #calculator--buttons {
     display: flex;
-    width: 30%;
+    width: 65%;
     flex-wrap: wrap;
 }
 
+#button--1 {
+    width: 33%;
+}
+#button--2 {
+    width: 33%;
+}
+#button--3 {
+    width: 33%
+}
+#button--4 {
+    width: 33%
+}
+#button--5 {
+    width: 33%;
+}
+#button--6 {
+    width: 33%
+}
+#button--6 {
+    width: 33%
+}
+#button--7 {
+    width: 33%
+}
+#button--8 {
+    width: 33%;
+}
+#button--9 {
+    width: 33%;
+}
 #button--0 {
-    width: 100%;
+    width: 99%;
     align-self: center;
 }
 
